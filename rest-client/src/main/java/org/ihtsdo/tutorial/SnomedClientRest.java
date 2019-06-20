@@ -24,7 +24,7 @@ import org.ihtsdo.tutorial.util.Utility;
 public class SnomedClientRest {
 
   /** The base url. */
-  private final String baseUrl = "http://browser.ihtsdotools.org/api/v1/snomed/";
+  private final String baseUrl = "https://browser.ihtsdotools.org/api/v1/snomed/";
 
   /** The edition. */
   private final String edition = "en-edition";

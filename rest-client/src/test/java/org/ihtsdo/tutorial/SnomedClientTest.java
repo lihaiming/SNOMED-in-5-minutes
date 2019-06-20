@@ -59,7 +59,7 @@ public class SnomedClientTest {
     System.out.println("    filters = " + results.getFilters());
 
     // Verify things about the results
-    assertEquals(results.getDetails().get("total"), new Long(13));
+    assertEquals(results.getDetails().get("total"), new Long(24));
     assertEquals(results.getMatches().get(0).getTerm(), "Heart attack");
     assertEquals(results.getMatches().get(0).getConceptId(), "22298006");
     assertTrue(results.getMatches().get(0).isActive());
@@ -68,20 +68,20 @@ public class SnomedClientTest {
         "Myocardial infarction (disorder)");
     assertEquals(results.getMatches().get(0).getModule(), "900000000000207008");
     assertEquals(results.getMatches().get(0).getDefinitionStatus(),
-        "Fully defined");
+        "900000000000073002");
 
-    assertEquals(results.getDetails().get("total"), new Long(13));
+    assertEquals(results.getDetails().get("total"), new Long(24));
     assertEquals(results.getDetails().get("skipTo"), new Long(0));
     assertEquals(results.getDetails().get("returnLimit"), new Long(100));
 
-    assertEquals(results.getFilters().get("lang").get("english"), new Long(13));
+    assertEquals(results.getFilters().get("lang").get("english"), new Long(24));
     assertEquals(results.getFilters().get("semTag").get("disorder"),
-        new Long(1));
+        new Long(2));
     assertEquals(results.getFilters().get("semTag").get("finding"), new Long(6));
     assertEquals(results.getFilters().get("semTag").get("assessment scale"),
         new Long(6));
     assertEquals(results.getFilters().get("module").get("900000000000207008"),
-        new Long(13));
+        new Long(24));
 
   }
 
